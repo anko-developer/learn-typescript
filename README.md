@@ -1,0 +1,2 @@
+# learn-typescript
+Typescript Basic!
