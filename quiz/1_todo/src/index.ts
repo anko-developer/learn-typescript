@@ -1,4 +1,4 @@
-let todoItems;
+let todoItems: any;
 
 // api
 function fetchTodoItems() {
@@ -16,7 +16,8 @@ function fetchTodos() {
   return todos;
 }
 
-function addTodo(todo) {
+// return 값이 딱히 없을 때는 void
+function addTodo(todo): void {
   todoItems.push(todo);
 }
 
