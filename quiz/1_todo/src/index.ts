@@ -1,7 +1,7 @@
-let todoItems: any;
+let todoItems: object[];
 
 // api
-function fetchTodoItems() {
+function fetchTodoItems(): object[] {
   const todos = [
     { id: 1, title: '안녕', done: false },
     { id: 2, title: '타입', done: false },
@@ -11,31 +11,31 @@ function fetchTodoItems() {
 }
 
 // crud methods
-function fetchTodos() {
+function fetchTodos(): object[] {
   const todos = fetchTodoItems();
   return todos;
 }
 
 // return 값이 딱히 없을 때는 void
-function addTodo(todo): void {
+function addTodo(todo: object): void {
   todoItems.push(todo);
 }
 
-function deleteTodo(index) {
+function deleteTodo(index: number): void {
   todoItems.splice(index, 1);
 }
 
-function completeTodo(index, todo) {
+function completeTodo(index: number, todo: object): void {
   todo.done = true;
   todoItems.splice(index, 1, todo);
 }
 
 // business logic
-function logFirstTodo() {
+function logFirstTodo(): object {
   return todoItems[0];
 }
 
-function showCompleted() {
+function showCompleted(): object[] {
   return todoItems.filter(item => item.done);
 }
 
@@ -45,7 +45,7 @@ function addTwoTodoItems() {
 }
 
 // NOTE: 유틸 함수
-function log() {
+function log(): void {
   console.log(todoItems);
 }
 
