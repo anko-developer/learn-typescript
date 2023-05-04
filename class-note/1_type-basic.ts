@@ -1,31 +1,30 @@
-// 문자열 선언
-const str: string = 'hello';
+// js 문자열 선언
+const str = 'hello';
 
-// 숫자열 선언
-const num: number = 1;
+// ts 문자열 선언
+const str1: string = 'hello';
 
-// 배열타입<숫자 혹은 문자>
-const arr: Array<number> = [1,2,3]; // 배열<숫자>
-const items: number[] = [1,2,3]; // 배열<숫자>
-const heroes: Array<string> = ['하하', '호호'];
+// 숫자열
+let num: number = 1;
 
-// 튜플 (배열의 순서 타입까지 지정하는 것을 튜플이라고 한다)
-// 모든 인덱스에 타입이 정해져있는 것
-const address: [string, number] = ['string', 10];
+// 배열<숫자열>
+let arr: Array<number> = [1,2,3];
+let items: number[] = [1,2,3];
 
-// 객체
-const obj: object = {};
+// 배열<문자열>
+let heroes: Array<string> = ['하하', '토르', '히히'];
 
-// const person: object = {
-//     name: 'anko',
-//     age: 5
-// };
+// ts 튜플 - 배열의 각각 인덱스에 타입을 지정하는 것을 튜플
+let address: [string, number] = ['seoul', 100];
 
-// object 안에 속성값의 타입도 각각 지정이 가능
-const person: {name: string, age: number} = {
+// ts 객체
+let obj: object = {};
+
+// ts 객체 - 객체 안의 속성 각각에 타입을 지정
+let person: { name: string, age: number | string } = {
     name: 'anko',
     age: 5
-}
+};
 
-// 진위값
+// ts 진위값
 let show: boolean = true;
