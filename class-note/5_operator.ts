@@ -5,7 +5,7 @@
 // logMessage('Hi');
 // logMessage(100);
 
-let anko: string | number;
+let anko: string | number; 
 
 function logMessage(value: string | number) {
   if (typeof value === 'number') {
