@@ -7,7 +7,7 @@ function getB(b = 10) {
 }
 
 // 타입 추론 기본 2
-// interface Dropdown<T> {
+// interface Dropdown<T> { 
 //   value: T;
 //   title: string;
 // }
