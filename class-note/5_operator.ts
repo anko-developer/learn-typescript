@@ -1,25 +1,22 @@
-// function logMessage(value: any) {
+// function logMessage(value: any): void {
 //   console.log(value);
 // }
+// logMessage("hello");
 
-// logMessage('Hi');
-// logMessage(100);
-
-let anko: string | number; 
-
+// 하나의 타입 이상 쓸 수 있는 것을 유니온 타입이다.
+let kmw: string | number | boolean;
 function logMessage(value: string | number) {
-  if (typeof value === 'number') {
+  if (typeof value === "number") {
     value.toLocaleString();
-  } else if(typeof value === 'string') {
+  }
+  if (typeof value === "string") {
     value.toString();
   }
-  throw new TypeError('value must be string or number');
+  throw new TypeError("value ,ust be string or mbmber");
 }
 
-logMessage('hello');
+logMessage("hello");
 logMessage(100);
-
-
 
 interface Developer {
   name: string;
@@ -31,23 +28,15 @@ interface Person {
   age: number;
 }
 
-function askSomeone1(someone: Developer | Person) {
-  // 유니온타입의 2개 인터페이스에서 공통 속성만 접근 가능함
-  someone.name; 
-}
-askSomeone1({ name: '개발', skill: '개발' });
-askSomeone1({ name: '호호', age: 5 });
-
-
-function askSomeone2(someone: Developer & Person) {
-  // 인터섹션타입의 2개 인터페이스에서 모든 속성과 타입을 모두 접근 가능함
-  someone.name; 
-  someone.age;
-  someone.skill;
+function askSomeone(someone: Developer | Person): void {
+  someone.name; // Developer, Person 서로 중복되는 name 값만 사용 가능한 특징이 있음
 }
 
-// 유니온타입과는 달리 에러가 난다
-// 인터섹션타입의 모든 속성이 들어가야한다고 가이드가 나옴 (name, skill, age)
-askSomeone2({ name: '개발', skill: '개발' });
-askSomeone2({ name: '호호', age: 5 });
+// & 를 넣은 인터섹션 타입
+// function askSomeone(someone: Developer & Person): void {
+//   someone.skill; // Developer, Person 에 들어있는 모든 값이 다 들어가야함 "&" 인터섹션 타입의 특징
+// }
 
+// 실무에서는 인터섹션 보다는 유니온 타입이 상대적으로 더 많이 쓰인다.
+askSomeone({ name: "디벨로퍼", skill: "개발" });
+askSomeone({ name: "명욱", age: 100 });
