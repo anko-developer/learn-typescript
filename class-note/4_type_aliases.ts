@@ -1,27 +1,22 @@
-// interface Person {
-//   name: string;
-//   age: number;
-// }
-
-type Person = {
+interface Person {
   name: string;
   age: number;
 }
 
-const anko: Person = {
-  name: '앙꼬',
-  age: 5
-}
+// type Person = {
+//   name: string;
+//   age: number;
+// }
 
-type MyString = string;
-const str: MyString = 'hi';
+let kmw: Person = {
+  name: "명욱",
+  age: 37,
+};
 
-type Todo = { 
+type Todo = {
   id: string;
   title: string;
   done: boolean;
-}
+};
 
-function getTodo(todo: Todo) {
-  
-}
+function getTodo(todo: Todo): void {}
