@@ -5,3 +5,4 @@ enum Shoes {
 
 let myShoes = Shoes.Nike;
 console.log(myShoes);
+ 
