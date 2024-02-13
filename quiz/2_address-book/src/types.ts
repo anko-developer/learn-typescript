@@ -10,6 +10,7 @@ interface Contact {
   phones: PhoneNumberDictionary;
 }
 
+// enum 속성 = 할당 값
 enum PhoneType {
   Home = 'home',
   Office = 'office',

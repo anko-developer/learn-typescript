@@ -1,8 +1,13 @@
+// 타입 단언
+// 내가 정의한 타입으로 그렇게 간주를 해라
 let a;
 a = 20;
-a = 'a';
-let b = a as string;
+a = 'bb';
+const b = a as string;
 
 // DOM API 조작
-const div = document.querySelector('div');
-div.innerText = 'good';
+// <div id="app"></div>
+const div = document.querySelector('#app') as HTMLDivElement;
+if (div) {
+  div.innerText = 'ddd';
+}

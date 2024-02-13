@@ -51,7 +51,7 @@ class AddressBook {
 
   constructor() {
     this.fetchData();
-    findContactByPhone(PhoneType.Home);
+    // findContactByPhone(PhoneType.Home);
   }
 
   fetchData(): void {
